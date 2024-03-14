@@ -1,4 +1,4 @@
-package com.edu.uptc.apirestdistribuidos;
+package com.edu.uptc.apiRestDistribuidos;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
