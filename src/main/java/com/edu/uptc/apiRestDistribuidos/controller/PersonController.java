@@ -1,2 +1,4 @@
-package com.edu.uptc.apiRestDistribuidos.controller;public class PersonController {
+package com.edu.uptc.apiRestDistribuidos.controller;
+
+public class PersonController {
 }
