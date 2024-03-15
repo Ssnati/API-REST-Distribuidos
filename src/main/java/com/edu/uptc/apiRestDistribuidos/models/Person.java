@@ -15,22 +15,22 @@ import lombok.Setter;
 @Getter
 
 @Entity
-@Table (name = "PERSONAS")
+@Table(name = "PERSONAS")
 public class Person {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_persona")
     private int id;
-    @Column (name = "nombre_persona")
+    @Column(name = "nombre_persona")
     private String firstName;
-    @Column (name = "apellido_persona")
+    @Column(name = "apellido_persona")
     private String lastName;
-    @Column (name = "fecha_naccimiento")
+    @Column(name = "fecha_naccimiento")
     private Date fechaNacimiento;
-    @Column (name = "id_ciudad_origen")
+    @Column(name = "id_ciudad_origen")
     private int idCiudadOrigen;
-    @Column (name = "numero_random")
+    @Column(name = "numero_random")
     private int numeroRandom;
-    @Column (name = "nombre_cliente")
+    @Column(name = "nombre_cliente")
     private String nombreCliente;
 }

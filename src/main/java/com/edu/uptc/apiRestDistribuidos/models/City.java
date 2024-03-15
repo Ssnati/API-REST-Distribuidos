@@ -13,12 +13,12 @@ import lombok.Setter;
 @Getter
 
 @Entity
-@Table (name = "CIUDADES")
+@Table(name = "CIUDADES")
 public class City {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ciudad")
     private int id;
-    @Column (name = "nombre_ciudad")
-    private String nombreCiudad;    
+    @Column(name = "nombre_ciudad")
+    private String nombreCiudad;
 }
