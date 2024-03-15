@@ -1,4 +1,4 @@
-package com.edu.uptc.apiRestDistribuidos.controller;
+package com.edu.uptc.apiRestDistribuidos.controllers;
 
 import com.edu.uptc.apiRestDistribuidos.repository.IPersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
