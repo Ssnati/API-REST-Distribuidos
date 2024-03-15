@@ -1,6 +1,6 @@
 package com.edu.uptc.apiRestDistribuidos.rest;
 
-import com.edu.uptc.apiRestDistribuidos.models.Personas;
+import com.edu.uptc.apiRestDistribuidos.models.Persona;
 import com.edu.uptc.apiRestDistribuidos.repository.IPersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -17,26 +17,26 @@ public class RestPersonController {
     private IPersonRepository personRepository;
 
     @GetMapping("/all")
-    public List<Personas> getAll() {
+    public List<Persona> getAll() {
         return personRepository.findAll();
     }
 
     @GetMapping("/{id}")
-    public Personas getById(@PathVariable Long id) {
-        Optional<Personas> person = personRepository.findById(id);
+    public Persona getById(@PathVariable Long id) {
+        Optional<Persona> person = personRepository.findById(id);
         return person.orElse(null);
     }
 
     @PostMapping
-    public void save(@RequestBody Personas person) {
+    public void save(@RequestBody Persona person) {
         personRepository.save(person);
     }
 
     @GetMapping("/city/{id}")
-    public List<Personas> getByCity(@PathVariable Long id) {
-        List<Personas> persons = new LinkedList<>();
+    public List<Persona> getByCity(@PathVariable Long id) {
+        List<Persona> persons = new LinkedList<>();
         personRepository.findAll().forEach(person -> {
-            if (person.getIdCiudadOrigen() == id) {
+            if (person.getCiudadOrigen().getId() == id) {
                 persons.add(person);
             }
         });
