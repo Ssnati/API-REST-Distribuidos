@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/city")
@@ -20,8 +21,9 @@ public class RestCityController {
     }
 
     @GetMapping("/{id}")
-    public City getById(Long id) {
-        return cityRepository.findById(id).get();
+    public City getById(@PathVariable Long id) {
+        Optional<City> city = cityRepository.findById(id);
+        return city.orElse(null);
     }
 
     @PostMapping

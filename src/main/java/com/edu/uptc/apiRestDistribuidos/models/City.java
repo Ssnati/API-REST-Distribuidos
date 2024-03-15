@@ -16,7 +16,6 @@ import lombok.Setter;
 @Table(name = "CIUDADES")
 public class City {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_ciudad")
     private int id;
     @Column(name = "nombre_ciudad")

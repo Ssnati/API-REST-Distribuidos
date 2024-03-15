@@ -16,16 +16,15 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "PERSONAS")
-public class Person {
+public class Personas {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_persona")
     private int id;
     @Column(name = "nombre_persona")
     private String firstName;
     @Column(name = "apellido_persona")
     private String lastName;
-    @Column(name = "fecha_naccimiento")
+    @Column(name = "fecha_nacimiento")
     private Date fechaNacimiento;
     @Column(name = "id_ciudad_origen")
     private int idCiudadOrigen;
