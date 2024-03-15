@@ -21,4 +21,9 @@ public class PersonController {
         model.addAttribute("personas", repo.findAll());
         return "greeting";
     }
+    
+    @GetMapping ("/hola")
+    public String hola(){
+        return "Hooooolaaaaa";
+    }
 }
