@@ -1,4 +1,4 @@
-package com.edu.uptc.apiRestDistribuidos.controller;
+package com.edu.uptc.apiRestDistribuidos.controllers;
 
 import org.springframework.stereotype.Controller;
 
